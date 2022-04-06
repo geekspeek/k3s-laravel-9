@@ -53,7 +53,7 @@ services:
             context: .
             target: frontend
         # Override the default CMD, so we can watch changes to frontend files, and re-transpile them.
-        command: [ "npm", "run", "watch" ]
+        command: ["npm", "run", "watch"]
         image: laravel-in-kubernetes/frontend
         volumes:
             # Here we mount in our codebase so any changes are immediately reflected into the container
@@ -80,11 +80,12 @@ services:
         networks:
             - laravel-in-kubernetes
         healthcheck:
-            test: [ "CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}" ]
-            retries: 3
-            timeout: 5s
+          test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+          retries: 3
+          timeout: 5s
+
 networks:
     laravel-in-kubernetes:
- # At the end of the file
+
 volumes:
     laravel-in-kubernetes-mysql:
