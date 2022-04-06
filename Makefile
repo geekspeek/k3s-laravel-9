@@ -7,7 +7,9 @@ VERSION ?= v0.0.1
 # To push to a specific registry,
 # you can use the REGISTRY as an arg of the docker build command (e.g make docker REGISTRY=my_registry.com/username)
 # You may also change the default value if you are using a different registry as a default
-REGISTRY ?= registry.gitlab.com/laravel-in-kubernetes/laravel-app
+# REGISTRY ?= registry.gitlab.com/laravel-in-kubernetes/laravel-app
+REGISTRY ?= ghcr.io/geekspeek/k3s-laravel-9
+
 
 
 # Commands
